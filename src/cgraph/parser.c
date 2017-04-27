@@ -133,8 +133,9 @@ static void parse_unary() {
 		if (t.symbol == '-') {
 			outbyte(CMD_NEG);
 		}
+	} else {
+		parse_value();
 	}
-	parse_value();
 }
 
 static void parse_binary(int prec) {
